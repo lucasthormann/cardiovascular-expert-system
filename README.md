@@ -2,7 +2,7 @@
 * This was the first project to be assigned in the Introduction to Artificial Intelligence (CS 4346) course offered by Texas State University during the Fall semester of 2021.
 
 **Description:**
-* This program is an implementation of an expert system designed for "medical professionals" to use in order to diagnose cardiovascular diseases and to recommend a treatment based on the diagnosis. This system is implemented using both the backward and forward chaining algorithms. In order to properly use this software the user must understand the meaning of the abbreviated symptoms, diseases, and treatments. That information is included in the project report.
+* This is an implementation of an expert system designed for "medical professionals" to use in order to diagnose cardiovascular diseases and to recommend a treatment based on the diagnosis. The logic of this system is implemented using the backward and forward chaining algorithms. In order to properly use this software the user must understand the meaning of the abbreviated symptoms, diseases, and treatments. That information is included in the project report.
 
 **Development Environment:**
 * Acer Aspire E5-575 (x86_64)
@@ -10,24 +10,24 @@
 * Code::Blocks 20.03
 
 **Target Environment:**
-* A server (managed by university staff) running a Red Hat Enterprise Linux 8.5 instance
+* A server (managed by university staff) running a Red Hat Enterprise Linux 9.0 instance
 
 **Dependencies:**
-* GCC 16.1 or newer in order to use the most up to date version of G++
+* GCC 16.1 or newer
 * Git 2.43.0 or newer
 
 
 # How To Run
 
-* Clone the repo by running the following command
+* Clone the repo
 ```
-git clone https://github.com/lucasthormann/forward-backward-chaining-demo.git
+git clone https://github.com/lucasthormann/cardiovascular-expert-system.git
 ```
-* Build the application by using the following command
+* Preprocess, compile, assemble, and link the program
 ```
-g++ -std=c++11 Forward-Backward-Chaining.cpp -o expert
+g++ -std=c++11 expert.cpp -o expert
 ```
-* Run the linker output by using the following command
+* Run the linker output
 ```
 ./expert
 ```
