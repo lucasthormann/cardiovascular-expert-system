@@ -6,38 +6,36 @@
 
 **Development Environment:**
 * Acer Aspire E5-575 (x86_64)
-* Windows 10
-* Code::Blocks 20.03
+* Windows (10)
+* Code::Blocks (20.03)
 
 **Target Environment:**
-* A server (managed by university staff) running a Red Hat Enterprise Linux 9.0 instance
+* A server (managed by university staff) running a Red Hat Enterprise Linux (9.0) instance
 
 **Dependencies:**
-* GCC 16.1 or newer
-* Git 2.43.0 or newer
+* Git (2.43.0 or newer)
+* GCC (16.1 or newer)
 
 
 # How To Run
 
-* Clone the repo
+1. Clone the repo
 ```
 git clone https://github.com/lucasthormann/cardiovascular-expert-system.git
 ```
-* Preprocess, compile, assemble, and link the program
+2. Preprocess, compile, assemble, and link the program
 ```
 g++ -std=c++11 expert.cpp -o expert
 ```
-* Run the linker output
+3. Run the executable
 ```
 ./expert
 ```
 # Pseudocode
-
-**Backward Chaining & Forward Chaining Simplification**
-1. Backward Chaining
-- The technique implemented to diagnose a disease was the backward chaining algorithm. This algorithm functions via a few simple data structures. The algorithm's functionalty (in essence) is described via this psuedocode:
+* Backward chaining algorithm
+  - The technique implemented to diagnose a disease. The algorithm's logic is detailed via the below pseudocode:
 ```
-Backward-Chaining(H)
+Backward Chaining(H)
 if H matches an assertion in working memory then
 	return true
 end if
@@ -51,10 +49,10 @@ for every rule R with a consequent that matches H do
 end for
 return false
 ```
-2. Forward Chaining
-- The technique implemented to recommend a treatment predicated on the diagnosis was the forward chaining algorithm. This algorithm functions via a few simple data structures as well. The algorithm's functionalty (in essence) is described via this psuedocode:
+* Forward chaining algorithm
+  - The technique implemented to recommend a treatment predicated on the diagnosis. The algorithm's logic is detailed via the below pseudocode:
 ```
-Forward-Chaining
+Forward Chaining
 repeat
 	for every rule do
 		if antecedents match assertions in the rule set and consequents would change the working memory then
